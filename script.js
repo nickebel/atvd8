@@ -1,10 +1,10 @@
-function exibir() {
-    let nome = document.getElementById("txtNome").value;
-    let cidade = document.getElementById("cidade").value;
-    let opcoes = document.getElementsByName("opcoes");
-    let valorSelecionado = "";
+function exibirMensagem() {
+    var nome = document.getElementById('nome').value;
+    var cidade = document.getElementById('cidade').value;
+    var moraNaCidade = document.querySelector('input[name="moraNaCidade"]:checked').value;
 
    
+    var mensagem = `Bem-vindo(a) ${nome}, a cidade escolhida foi ${cidade}. Você mora na cidade: ${moraNaCidade === 'sim' ? 'sim' : 'não'}.`;
 
-    alert( `Bem-vindo {nome}, a cidade escolhida foi . Você mora na cidade: valorSelecionado.`);
- }
+    document.getElementById('mensagem').textContent = mensagem;
+}
